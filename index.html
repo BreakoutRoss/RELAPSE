@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hatchet Breakout</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+    <style>
+        body { 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #2d2d2d;
+        }
+        canvas { display: block; }
+        .hidden { display: none; }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .input-field {
+            font-size: 20px;
+            padding: 10px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="start-screen" class="center">
+        <h1>Hello Degen, enter your name</h1>
+        <input id="player-name" class="input-field" type="text" placeholder="Your name">
+        <button id="start-button" class="button">Start Game</button>
+    </div>
+    <div id="game-container" class="hidden"></div>
+    <div id="leaderboard-screen" class="center hidden">
+        <h1>YOU RELAPSED, TRY AGAIN</h1>
+        <div id="leaderboard"></div>
+        <button id="play-again-button" class="button">Play Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
